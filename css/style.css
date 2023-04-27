@@ -140,11 +140,18 @@ header .arrow-image{
     top: 64%;
     transform: translate(-50%,-50%);
 }
-
-section.brand .top img, section.stand-out .top img{
+section.brand .top, section.stand-out .top {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 400px;
+}
+section.brand .top {
+    background-image: url(../images/mobile/image-transform.jpg)
+}
+section.stand-out .top{
+    background-image: url(../images/mobile/image-stand-out.jpg);
 }
 section.brand .bottom,  section.stand-out .bottom{
     padding: 3rem 1rem;
@@ -177,7 +184,7 @@ section.photography{
 }
 section.graphic-design .bottom, section.photography .bottom {
     width: 90%;
-    max-width: 400px;
+    max-width:400px;
     margin:0 auto;
     text-align: center;
     padding-bottom: 2rem;
@@ -194,7 +201,7 @@ section.testimonials{
     text-align: center;
 }
 section.testimonials .container{
-    max-width: 1024px;
+    max-width: 1324px;
     width: 90%;
     margin: 0 auto;
 }
@@ -243,15 +250,28 @@ section.testimonials .card-wrapper .card .name-position span:last-child{
     font-size: 0.8rem;
     font-weight: 600;
 }
-
-section.photos-gallery img {
+section.photos-gallery .milk-bottles{
+    background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+}
+section.photos-gallery .orange{
+    background-image: url(../images/mobile/image-gallery-orange.jpg);
+}
+section.photos-gallery .cone {
+    background-image: url(../images/mobile/image-gallery-cone.jpg);
+}
+section.photos-gallery .sugar {
+    background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+}
+section.photos-gallery .milk-bottles, section.photos-gallery .orange, section.photos-gallery .cone,section.photos-gallery .sugar {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 200px;
 }
 section.photos-gallery {
     display: grid;
-   grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
 }
 
 footer {
@@ -300,13 +320,37 @@ footer .container .social-links li:last-child {
 }
 
 /*! Media screens */
-@media (min-width:460px)
+@media (min-width:425px)
 {
+    section.brand .top {
+        background-image: url(../images/desktop/image-transform.jpg);
+        height: 600px;
+    }
+    section.stand-out .top{
+        background-image: url(../images/desktop/image-stand-out.jpg);
+        height: 600px;
+    }
     section.graphic-design {
         background-image: url(../images/desktop/image-graphic-design.jpg);
     }
     section.photography {
         background-image: url(../images/desktop/image-photography.jpg);
+    }
+    section.photos-gallery .milk-bottles{
+        background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+        height:400px;
+    }
+    section.photos-gallery .orange{
+        background-image: url(../images/desktop/image-gallery-orange.jpg);
+        height:400px;
+    }
+    section.photos-gallery .cone {
+        background-image: url(../images/desktop/image-gallery-cone.jpg);
+        height:400px;
+    }
+    section.photos-gallery .sugar {
+        background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+        height:400px;
     }
 }
 @media (min-width:768px)
@@ -367,7 +411,6 @@ footer .container .social-links li:last-child {
         }
         section.brand .top{
             order: 1;
-            background-image: url(../images/desktop/image-transform.jpg);
         }
         section.brand .bottom,  section.stand-out .bottom{
             text-align: start;
@@ -382,8 +425,8 @@ footer .container .social-links li:last-child {
         }
         section.testimonials .card-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+            gap: 1rem;
         }
         section.photos-gallery {
             display: grid;
