@@ -18,7 +18,7 @@
 }
 
 html{
-    font-size: 18px;
+    font-size: 14px;
 }
 
 body{
@@ -53,7 +53,7 @@ p{
 
 header{
     background-image: url(../images/mobile/image-header.jpg);
-    min-height: 100vh;
+    min-height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -321,6 +321,12 @@ footer .container .social-links li:last-child {
 /*! Media screens */
 @media (min-width:425px)
 {
+    html{
+        font-size: 18px;
+    }
+    header .container .right nav{
+        top: 40%;
+    }
     section.brand .top {
         background-image: url(../images/desktop/image-transform.jpg);
         height: 600px;
@@ -393,6 +399,7 @@ footer .container .social-links li:last-child {
         }
         header .container .right nav ul li a{
             color: var(--white);
+            text-transform: capitalize;
         }
         .btn-primary-mobile {
             background-color: var(--white);
@@ -431,4 +438,10 @@ footer .container .social-links li:last-child {
             display: grid;
             grid-template-columns: repeat(4,1fr);
         }
+}
+@media (min-width:1024px)
+{
+    html{
+        font-size: 20px;
+    }
 }
