@@ -53,7 +53,7 @@ p{
 
 header{
     background-image: url(../images/mobile/image-header.jpg);
-    min-height: 85vh;
+    min-height: 95vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -443,5 +443,14 @@ footer .container .social-links li:last-child {
 {
     html{
         font-size: 20px;
+    }
+    section.testimonials {
+        padding: 7.5rem 0;
+    }
+}
+@media (min-width:1378px)
+{
+    section.testimonials .card-wrapper .card{
+        margin-bottom: 0rem;
     }
 }
